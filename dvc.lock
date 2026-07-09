@@ -13,3 +13,16 @@ stages:
       md5: b7ac4496734ff387aca131728f63e9a1.dir
       size: 900635
       nfiles: 2
+  data_transformation:
+    cmd: python ./src/data_preprocessing.py
+    deps:
+    - path: src/data_preprocessing.py
+      hash: md5
+      md5: bc247dfa70b08fe250ff856adb36ff4a
+      size: 2431
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: e6be6928b798aca1a5228ee58adcbe10.dir
+      size: 688524
+      nfiles: 2
