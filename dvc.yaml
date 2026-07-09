@@ -20,9 +20,18 @@ stages:
     outs:
       - data/features
 
+
   model_building:
     cmd: python ./src/model_building.py
     deps:
       - src/model_building.py
     outs:
       - model.pkl
+  
+
+  model_evaluation:
+    cmd: python ./src/model_evaluation.py
+    deps:
+      - src/model_evaluation.py
+    outs:
+      - metrics.json
